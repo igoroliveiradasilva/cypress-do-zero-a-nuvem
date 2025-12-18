@@ -10,6 +10,8 @@ describe('Central de Atendimentos ao Cliente TAT', () => {
     });
 
     it('Preenche os campos obrigatórios e envia o formulário', () => {
+        const longText = Cypress._.repeat('Teste Texto Teste Texto Teste Texto', 5)
+
         // Nome
         cy.get('[name="firstName"]')
             .type('Carlos')
@@ -21,7 +23,7 @@ describe('Central de Atendimentos ao Cliente TAT', () => {
             .type('carlos@dogmail.com')
         // Textarea 'como podemos ajudar...'
         cy.get('[name="open-text-area"]')
-            .type('Quero ração!')
+            .type(longText, { delay: 0 })
         // Enviar
         cy.get('.button')
             .click()
@@ -31,5 +33,4 @@ describe('Central de Atendimentos ao Cliente TAT', () => {
             .should('be.visible')
 
     });
-
 });
