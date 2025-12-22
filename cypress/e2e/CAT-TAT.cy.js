@@ -74,7 +74,7 @@ describe('Central de Atendimentos ao Cliente TAT', () => {
             .should('have.value', '')
 
         cy.get(':nth-child(2) > :nth-child(1) > [name="email"]')
-            .type('carlos@dogmail,com')
+            .type('carlos@dogmail.com')
             .should('have.value', 'carlos@dogmail.com')
             .clear()
             .should('have.value', '')
@@ -103,5 +103,10 @@ describe('Central de Atendimentos ao Cliente TAT', () => {
         cy.fillMandatoryFieldsAndSubmit(data)
 
         cy.get('.success').should('be.visible')
+    });
+
+    it.only('Seleciona um produto (YouTube) por seu texto', () => {
+        cy.get('#product').select('YouTube')
+            .should('have.value', 'youtube')
     });
 });
