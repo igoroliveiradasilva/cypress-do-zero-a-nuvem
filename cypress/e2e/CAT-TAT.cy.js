@@ -43,4 +43,10 @@ describe('Central de Atendimentos ao Cliente TAT', () => {
         cy.get('.button').click()
         cy.get('.error > strong').should('be.visible')
     });
+
+    it('Campo telefone continua vazio quando preenchido com um valor não-numérico', () => {
+        cy.get('#phone')
+            .type('abcde')
+            .should('have.value', '')
+    });
 });
