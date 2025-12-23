@@ -135,12 +135,25 @@ describe('Central de Atendimentos ao Cliente TAT', () => {
             })
     });
 
-    it.only('Marca ambos checkbox, depois desmarca o último', () => {
+    it('Marca ambos checkbox, depois desmarca o último', () => {
         cy.get('input[type="checkbox"]')
             .check()
             .should('be.checked')
             .last()
             .uncheck()
             .should('be.not.checked')
+    });
+
+    it.only('Exibe mensagem de erro quando o telefone se torna obrigatório mas não é preenchido antes do envio do formulário', () => {
+        cy.get('[name="firstName"]').type('Carlos')
+        cy.get('[name="lastName"]').type('Oliveira')
+        cy.get(':nth-child(2) > :nth-child(1) > [name="email"]').type('carlos@dogmail.com')
+        cy.get('[name="open-text-area"]').type('Teste', { delay: 0 })
+        cy.get('#phone-checkbox').check()
+            .should('be.checked')
+
+        cy.contains('button', 'Enviar').click()
+
+        cy.get('.error > strong').should('be.visible')
     });
 });
