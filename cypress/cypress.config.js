@@ -1,8 +1,8 @@
-module.exports = {
-  e2e: {
-    setupNodeEvents(on, config) {
-    },
-    viewportWidth: 410,
-    viewportHeight: 860,
-  },
-};
+const { defineConfig } = required('cypress')
+
+module.exports = defineConfig({
+  viewportHeight: 880,
+  viewportWeight: 1280,
+  e2e: {},
+  video: true,
+});
