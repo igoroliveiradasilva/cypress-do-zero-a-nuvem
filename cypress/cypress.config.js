@@ -2,7 +2,7 @@ module.exports = {
   e2e: {
     setupNodeEvents(on, config) {
     },
-    viewportWidth: 600,
-    viewportHeight: 900,
+    viewportWidth: 410,
+    viewportHeight: 860,
   },
 };

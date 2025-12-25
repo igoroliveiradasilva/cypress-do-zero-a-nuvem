@@ -1,7 +1,7 @@
 describe('Central de Atendimentos ao Cliente TAT', () => {
 
     beforeEach(() => {
-        cy.viewport(470, 850) // ajuste igor
+        cy.viewport(410, 860) // ajuste igor
         cy.visit('./src/index.html')
     });
 
