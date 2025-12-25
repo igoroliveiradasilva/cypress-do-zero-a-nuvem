@@ -1,36 +1,33 @@
-# Pré-requisitos
+# cy-data-test
 
-Para a realização do curso, há sistemas que precisam estar instalados e conhecimentos prévios necessários, os quais são listados abaixo.
+[![main](https://github.com/wlsf82/cy-data-test/actions/workflows/ci.yml/badge.svg)](https://github.com/wlsf82/cy-data-test/actions)
 
-## Sistemas
+Sample project to demonstrate a `cy.dataTest` Cypress custom command.
 
-Antes de começar, certifique-se de que os seguintes sistemas estejam instalados em seu computador.
+## Pre-requirements
 
-- [git](https://git-scm.com/) (`2.42.1` no momento da redação deste artigo)
-- [Node.js](https://nodejs.org/en/) (`v20.13.1` no momento da redação deste artigo)
-- npm (`10.8.1` no momento da redação deste artigo)
-- [Visual Studio Code](https://code.visualstudio.com/) (`v1.90.2` no momento da redação deste artigo) ou alguma outra IDE de sua preferência
+It is required to have Node.js and npm installed to run this project.
 
-> **Obs.:** Recomendo usar as mesmas versões ou versões mais recentes de suporte de longo prazo (LTS) dos sistemas listados acima.
+> I used versions `v18.15.0` and `9.5.0` of Node.js and npm, respectively. I suggest you use the same or later versions.
+
+## Installation
+
+Run `npm install` (or `npm i` for the short version) to install the dev dependencies.
+
+## Tests
+
+> **Note:** Before running the tests, make a copy of the `cypress.env.example.json` file as `cypress.env.json`, which in the real world, you would update with valid credentials.
 >
-> **Obs. 2:** Ao instalar o Node.js, o npm é instalado junto. 🎉
->
-> **Obs. 3:** Para verificar as versões do git, Node.js e npm instaladas em seu computador, execute o comando `git --version && node --version && npm --version` em seu terminal de linha de comando.
->
-> **Obs. 4:** Deixei links para os instaladores na lista de requisitos acima, caso você ainda não os tenha instalados.
+> The `cypress.env.json` file is included on [`.gitignore`](./.gitignore) and you're safe that confidential info won't be versioned.
 
-## Conhecimentos
+Run `npm test` (or `npm t` for the short version) to run the test in headless mode.
 
-Para que você tire o melhor proveito do curso, é necessário que você possua ao menos conhecimentos básicos de:
+Or, run `npm run cy:open` to open Cypress in interactive mode.
 
-- [JavaScript](https://www.youtube.com/playlist?list=PL-eblSNRj0QH36XrwvGfhh14GjpG-ViS2)
-- [Seletores CSS](https://www.youtube.com/playlist?list=PL-eblSNRj0QHGg3iE2HAtOkzIyNH9DSjL)
-- [Linha de comando](https://github.com/wlsf82/linha-de-comando-basico/) e [git](https://youtube.com/live/xmTU2jqLuAc?feature=share)
+## Support this project
 
-> **Obs. 5:** Deixei links acima para playlists sobre JS e seletores CSS no [Canal TAT no YouTube](https://youtube.com/@talkingabouttesting), além de um repositório no GitHub com o básico de linha de comando e um vídeo sobre os comandos de git que mais utilizo.
+If you want to support this project, leave a ⭐.
 
 ___
 
-Legal, os pré-requisitos estão prontos. ☑️
-
-Clique [aqui](./_the-app_.md) que eu vou te apresentar a aplicação em teste.
+This project was created with 💚 by [Walmyr](https://walmyr.dev).
