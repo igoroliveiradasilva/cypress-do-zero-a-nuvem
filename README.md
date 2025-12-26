@@ -26,3 +26,8 @@ Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
 ___
 
 Este é um curso da **Escola Talking About Testing**.
+
+## Anotações extras:
+
+### Rodar testes com gravação
+npx cypress run --record --key 7c2e069f-0ab0-4e07-aef4-301c36164997
