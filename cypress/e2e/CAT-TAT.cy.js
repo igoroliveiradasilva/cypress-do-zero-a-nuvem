@@ -262,4 +262,14 @@ describe('Central de Atendimentos ao Cliente TAT', () => {
             .should('include', 'CAC TAT')
     });
 
+    it.only('Encontra o gatao escondido', () => {
+        cy.get('#cat')
+            .invoke('show')
+            .should('be.visible')
+        cy.get('#title')
+            .invoke('text', 'CAT TAT')
+        cy.get('#subtitle')
+            .invoke('text', 'Eu adoro gatos!')
+    });
+
 });
