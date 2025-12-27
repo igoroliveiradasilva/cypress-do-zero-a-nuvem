@@ -1,7 +1,7 @@
 describe('Central de Atendimentos ao Cliente TAT', () => {
 
     beforeEach(() => {
-        cy.viewport(410, 860) // ajuste igor
+        cy.viewport(620, 900) // ajuste igor
         cy.visit('./src/index.html')
     });
 
@@ -225,4 +225,22 @@ describe('Central de Atendimentos ao Cliente TAT', () => {
 
         cy.contains('h1', 'CAC TAT - Política de Privacidade')
     });
+
+    it.only('exibe e oculta as mensagens de sucesso e erro usando .invoke()', () => {
+        cy.get('.success')
+            .should('not.be.visible')
+            .invoke('show')
+            .should('be.visible')
+            .and('contain', 'Mensagem enviada com sucesso.')
+            .invoke('hide')
+            .should('not.be.visible')
+        cy.get('.error')
+            .should('not.be.visible')
+            .invoke('show')
+            .should('be.visible')
+            .and('contain', 'Valide os campos obrigatórios!')
+            .invoke('hide')
+            .should('not.be.visible')
+    })
+
 });
